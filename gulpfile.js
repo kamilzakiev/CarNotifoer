@@ -19,9 +19,10 @@ gulp.task("run", () => {
 		return function(actualNum) {
 			var configValue = getValue();
 			if (actualNum !== configValue) {
-				sendUpdate(url, name, configValue, actualNum);
 				setValue(actualNum);
 				fs.writeFileSync(carsFile, JSON.stringify(config));
+				
+				sendUpdate(url, name, configValue, actualNum);
 			} else {
 				console.log(name + '	- No update: ' + actualNum);
 			}
