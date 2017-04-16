@@ -8,7 +8,7 @@ var Slack = require('node-slack');
 
 var webHookUrl = "https://hooks.slack.com/services/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";
 
-var carsFile = "cars.json";
+var carsFile = "./config/cars.json";
 
 var config = JSON.parse(fs.readFileSync(carsFile));
 

@@ -36,5 +36,5 @@ matrix:
 
 cache:
   - C:\Users\appveyor\AppData\Roaming\npm-cache -> package.json         # npm cache
-  - cars.json -> package.json
+  - config -> package.json
   - node_modules -> package.json                                        # local npm modules
