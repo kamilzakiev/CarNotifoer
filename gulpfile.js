@@ -22,7 +22,7 @@ gulp.task("run", () => {
 				setValue(actualNum);
 				fs.writeFileSync(carsFile, JSON.stringify(config));
 				
-				sendUpdate(url, name, configValue, actualNum);
+				//sendUpdate(url, name, configValue, actualNum);
 			} else {
 				console.log(name + '	- No update: ' + actualNum);
 			}
