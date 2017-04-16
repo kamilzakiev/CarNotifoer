@@ -49,7 +49,9 @@ gulp.task("run", () => {
 });
 
 function sendUpdate(url, name, from, to) {
-	new Error(name + '	- Updated: ' + from + " > " + to);
+	var error = name + '	- Updated: ' + from + " > " + to;
+	console.log(error);
+	throw error;
 }
 
 function CheckCardNumber(url, validateFunction) {
