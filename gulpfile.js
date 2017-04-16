@@ -3,8 +3,10 @@ var fs = require("fs");
 var http = require("http");
 var $ = require("jquery");
 var request = require('request');
-
 var jsdom = require("jsdom").jsdom;
+var Slack = require('node-slack');
+
+var webHookUrl = "https://hooks.slack.com/services/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";
 
 var carsFile = "cars.json";
 
@@ -50,9 +52,16 @@ gulp.task("run", () => {
 });
 
 function sendUpdate(url, name, from, to) {
-	var error = name + '	- Updated: ' + from + " > " + to;
-	console.log(error);
-	throw error;
+	var msg = name + '	- Updated: ' + from + " > " + to;
+	console.log(msg);
+	
+	var slack = new Slack(webHookUrl);
+
+	slack.send({
+	    text: msg,
+	    channel: '#carnotifier',
+	    username: 'Bot'
+	});
 }
 
 function CheckCardNumber(url, validateFunction) {
