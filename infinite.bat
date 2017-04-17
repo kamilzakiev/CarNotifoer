@@ -5,8 +5,8 @@ SETLOCAL EnableDelayedExpansion
 
 echo !date! !time!
 
-call gulp run
+call node_modules\.bin\gulp run
 
-timeout /t 60 /nobreak > NUL
+timeout /t 10 /nobreak > NUL
 
 goto loop
