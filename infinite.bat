@@ -20,7 +20,7 @@ call node_modules\.bin\gulp run
 if "%closeArg%"=="close" (
     set min=%TIME:~3,2%
     
-    if "%min%"=="36" goto end
+    if "%min%"=="58" goto end
     if "%min%"=="59" goto end
   )
 
