@@ -28,7 +28,7 @@ test_script:
 
   #- node_modules\.bin\gulp run
 
-  - infinite.bat 60 close
+  - infinite.bat 600 close
 
 # scripts to run after tests
 on_finish :
